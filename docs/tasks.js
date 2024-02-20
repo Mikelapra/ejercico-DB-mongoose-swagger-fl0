@@ -6,13 +6,13 @@ module.exports = {
           task: "Create a task",
         },
         description: "Create task",
-        operationId: "createUser",
+        operationId: "createTask",
         parameters: [],
         requestBody: {
           content: {
             "application/json": {
               schema: {
-                $ref: "#/components/schemas/User",
+                $ref: "#/components/schemas/Task",
               },
             },
           },
@@ -29,13 +29,13 @@ module.exports = {
           task: "get a task",
         },
         description: "get task",
-        operationId: "createUser",
+        operationId: "getTask",
         parameters: [],
         requestBody: {
           content: {
             "application/json": {
               schema: {
-                $ref: "#/components/schemas/User",
+                $ref: "#/components/schemas/Task",
               },
             },
           },
@@ -55,13 +55,13 @@ module.exports = {
           task: "update a task title",
         },
         description: "update a task title",
-        operationId: "createUser",
+        operationId: "updateTask",
         parameters: [],
         requestBody: {
           content: {
             "application/json": {
               schema: {
-                $ref: "#/components/schemas/User",
+                $ref: "#/components/schemas/Task",
               },
             },
           },
@@ -74,20 +74,18 @@ module.exports = {
             description: "Server error",
           },
         },
-      }
-    },"/id/:_id": {
-      delete: {
+      },delete: {
         tags: {
           task: "delete a task",
         },
         description: "delete a task",
-        operationId: "createUser",
+        operationId: "deleteTask",
         parameters: [],
         requestBody: {
           content: {
             "application/json": {
               schema: {
-                $ref: "#/components/schemas/User",
+                $ref: "#/components/schemas/Task",
               },
             },
           },
